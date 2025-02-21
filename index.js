@@ -11,12 +11,12 @@ const server = http.createServer(app); // Create an HTTP server using Express
 // Configure Socket.io with CORS settings
 const io = new Server(server, {
   cors: {
-    origin: process.env.CORS_ORIGIN || 'http://localhost:5173', // Allow requests from this origin
+    origin: process.env.CORS_ORIGIN || 'http://localhost:5173' ||'https://scic-10-job-task.web.app', // Allow requests from this origin
     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
   },
 });
 
-const PORT = process.env.PORT || 5000; // Server port
+const PORT = process.env.PORT || 1000; // Server port
 const MONGO_URI = process.env.MONGO_URI; // MongoDB connection URI
 let db, tasksCollection, usersCollection; // MongoDB collections
 
