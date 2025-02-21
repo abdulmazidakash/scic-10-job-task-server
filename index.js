@@ -210,3 +210,7 @@ connectDB().then(() => {
     console.log(`Server running on port ${PORT}`);
   });
 });
+
+app.get('/', async(req, res)=>{
+  res.send(`server running on ${PORT}`)
+})
