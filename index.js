@@ -16,7 +16,7 @@ const io = new Server(server, {
   },
 });
 
-const PORT = process.env.PORT || 1000; // Server port
+const PORT = process.env.PORT || 5000; // Server port
 const MONGO_URI = process.env.MONGO_URI; // MongoDB connection URI
 let db, tasksCollection, usersCollection; // MongoDB collections
 
