@@ -8,13 +8,6 @@ const cors = require('cors'); // CORS middleware for handling cross-origin reque
 const app = express();
 const server = http.createServer(app); // Create an HTTP server using Express
 
-// Configure Socket.io with CORS settings
-// const io = new Server(server, {
-//   cors: {
-//     origin: process.env.CORS_ORIGIN || 'http://localhost:5173' ||'https://scic-10-job-task.web.app' || https://scic-10-job-task-akash.netlify.app, // Allow requests from this origin
-//     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
-//   },
-// });
 
 const io = new Server(server, {
   cors: {
